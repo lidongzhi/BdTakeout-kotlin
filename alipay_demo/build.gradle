@@ -1,0 +1,26 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
+
+    defaultConfig {
+        applicationId "com.alipay.sdk.pay.demo"
+        minSdkVersion 4
+        targetSdkVersion 28
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles 'proguard-project.txt'
+        }
+    }
+}
+
+dependencies {
+    implementation files('libs/alipaysdk.jar')
+    implementation files('libs/alipaysecsdk.jar')
+    implementation files('libs/alipayutdid.jar')
+    implementation files('libs/android-support-v13.jar')
+}
